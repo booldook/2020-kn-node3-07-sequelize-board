@@ -26,6 +26,13 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+db.User.hasMany(db.Board);    // 1 : Many
+db.Board.belongsTo(db.User);  // 1 : Many
+
+db.Board.belongsToMany(db.Tag, {through: 'board_tag'}); // Many : Many
+db.Tag.belongsToMany(db.Board, {through: 'board_tag'}); // Many : Many
+
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

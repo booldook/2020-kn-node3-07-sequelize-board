@@ -1,5 +1,10 @@
 module.exports = (sequelize, Sequelize) => {
 	return sequelize.define('Board', {
+		/* idx: {
+			type: Sequelize.INTEGER(11),
+			primarykey: true,
+			autoIncrement: true
+		}, */
 		title: {
 			type: Sequelize.STRING(255),
 			allowNull: false
