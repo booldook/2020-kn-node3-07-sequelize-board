@@ -12,10 +12,16 @@ module.exports = (sequelize, Sequelize) => {
 		writer: {
 			type: Sequelize.STRING(50),
 		},
-		content: {
+		oriname: {
+			type: Sequelize.STRING(255),
+		},
+		savename: {
+			type: Sequelize.STRING(255),
+		},
+		comment: {
 			type: Sequelize.TEXT()
 		},
-		rnum: {
+		readnum: {
 			type: Sequelize.INTEGER(11),
 			defaultValue: 0
 		}
